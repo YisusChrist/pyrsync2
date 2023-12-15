@@ -25,7 +25,7 @@ __all__ = [
     "patchstream",
     "patchstream_block",
     "rsyncdelta",
-    "blockchecksums"
+    "blockchecksums",
 ]
 
 
@@ -38,8 +38,7 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096, max_buffer=4096):
     """
 
     remotesignatures = {
-        weak: (index, strong) for index, (weak, strong)
-        in enumerate(remotesignatures)
+        weak: (index, strong) for index, (weak, strong) in enumerate(remotesignatures)
     }
     match = True
     matchblock = -1
@@ -54,10 +53,11 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096, max_buffer=4096):
             window_offset = 0
             checksum, a, b = weakchecksum(window)
 
-        if (checksum in remotesignatures and
-                remotesignatures[checksum][1] ==
-                hashlib.md5(window[window_offset:]).digest()):
-
+        if (
+            checksum in remotesignatures
+            and remotesignatures[checksum][1]
+            == hashlib.md5(window[window_offset:]).digest()
+        ):
             matchblock = remotesignatures[checksum][0]
 
             match = True
