@@ -36,5 +36,5 @@ setup(
         'Topic :: System :: Archiving :: Compression', ],
     packages=['pyrsync2'],
     package_dir={'pyrsync2': ''},
-    package_data={'': ['README\.md']},
+    package_data={'': ['README.md']},
 )
