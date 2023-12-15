@@ -67,6 +67,7 @@ class PyRsyncTests(unittest.TestCase):
         changed_blocks = [block for block, position in changes_in_blocks]
 
         with BytesIO(self.TEST_FILE) as changed_file:
+            #! test fails here at the BytesIO conversion
             file_buffer = changed_file.getbuffer()
 
             for block, position in changes_in_blocks:
