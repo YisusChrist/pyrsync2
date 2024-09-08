@@ -1,6 +1,4 @@
-This is a fork of the `pyrsync` package with some changes. `pyrsync2` is a Python module which implements the [rsync algorithm][1],
-written in pure Python. It _is not_ a wrapper for rsync, but a set of
-functions which apply full rsync functionality through Python.
+This is a fork of the `pyrsync` package with some changes. `pyrsync2` is a Python module which implements the [rsync algorithm][1], written in pure Python. It _is not_ a wrapper for rsync, but a set of functions which apply full rsync functionality through Python.
 
 It's a Python 3 only package!
 
@@ -54,8 +52,7 @@ An example use case for this module:
 
 # License
 
-The majority of the code for this module is taken from [Eric Pruitt's
-post at ActiveState][2]. It was orginally licensed under the [MIT license][3], and this license has been kept wthout modifications.
+The majority of the code for this module is taken from [Eric Pruitt's post at ActiveState][2]. It was originally licensed under the [MIT license][3], and this license has been kept without modifications.
 
 [1]: http://samba.anu.edu.au/rsync "Andrew Tridgell and Paul Mackerras. The rsync algorithm. Technical Report TR-CS-96-05, Canberra 0200 ACT, Australia, 1996."
 [2]: https://code.activestate.com/recipes/577518-rsync-algorithm "Rsync Algorithm (Python Recipe)"
